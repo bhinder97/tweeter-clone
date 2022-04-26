@@ -2,9 +2,38 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  border: 16px;
 }
 
-.counter {
+/* .counter {
   display: flex;
   justify-content: space-between;
+} */
+
+.count {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+.submit {
+  background-color: #a21886;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Bungee', cursive;
+}
+
+textarea {
+  width: 100%;
+  height: 2em;
+  border:none;
+  background-color: #f4f1ec;
+  border-bottom: solid 3px black;
+  outline: none;
+  font-size: 1em;
 }
