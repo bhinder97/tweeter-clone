@@ -1,0 +1,10 @@
+.new-tweet {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.counter {
+  display: flex;
+  justify-content: space-between;
+}
