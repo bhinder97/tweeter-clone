@@ -1,0 +1,44 @@
+/* html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+/*  */
+
+.nav-bar { 
+  color: #FFFFFF;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+  position: fixed; 
+  z-index: 1;
+  top:0;
+}
+
+
+.logo {
+  font-family: 'Bungee', cursive;
+  display: flex;
+}
+
+.bold {
+  font-weight: 900;
+  font-size: 30px;
+}
+
+.tweet-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-solid {
+  color: red;
+}
