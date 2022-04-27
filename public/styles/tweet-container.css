@@ -6,7 +6,7 @@
 }
 
 .tweet-container:hover {
-  box-shadow: 8px 8px 2px 1px rgb(45, 44, 44);
+  box-shadow: 8px 8px 2px 1px rgb(228, 5, 202);
 }
 
 .tweet-header {
@@ -31,21 +31,45 @@
   font-size: small;
 }
 
-.fa-flag {
+.user {
+  display: flex;
+  align-items: center;
+  margin: 0.5em;
+}
+
+.user-icon {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+/* .fa-flag {
   color: blue;
 }
 .fa-flag:hover {
   color: red;
+  cursor: pointer;
 }
 .fa-retweet {
   color: blue
 }
 .fa-retweet:hover {
-  color:red
+  color:red;
+  cursor: pointer;
 }
 .fa-heart {
   color: blue;
 }
 .fa-heart:hover {
   color: red;
+  cursor: pointer;
+} */
+
+.tweet-footer i {
+  color: blue;
+  cursor: pointer;
+}
+
+.tweet-footer i:hover {
+  color: red;
+  cursor: pointer;
 }
