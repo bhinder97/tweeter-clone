@@ -10,10 +10,6 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -53,9 +49,3 @@ body {
     margin: 180px 10px 0 40px;
   }
 }
-
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

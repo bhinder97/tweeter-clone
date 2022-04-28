@@ -47,30 +47,6 @@
   max-height: 40px;
 }
 
-
-
-/* .fa-flag {
-  color: blue;
-}
-.fa-flag:hover {
-  color: red;
-  cursor: pointer;
-}
-.fa-retweet {
-  color: blue
-}
-.fa-retweet:hover {
-  color:red;
-  cursor: pointer;
-}
-.fa-heart {
-  color: blue;
-}
-.fa-heart:hover {
-  color: red;
-  cursor: pointer;
-} */
-
 .tweet-footer i {
   color: blue;
   cursor: pointer;
