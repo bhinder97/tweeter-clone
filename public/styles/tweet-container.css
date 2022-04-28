@@ -1,13 +1,18 @@
 .tweet-container {
   display: flex;
-  border: 2px solid black;
   width: 100%;
   flex-direction: column;
 }
 
-.tweet-container:hover {
+.tweet {
+  border: 2px solid black;
+  margin: 1rem 0;
+}
+
+.tweet:hover {
   box-shadow: 8px 8px 2px 1px rgb(228, 5, 202);
 }
+
 
 .tweet-header {
   display: flex;
@@ -41,6 +46,8 @@
   max-width: 40px;
   max-height: 40px;
 }
+
+
 
 /* .fa-flag {
   color: blue;
