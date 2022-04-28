@@ -89,23 +89,38 @@ $(document).ready(() => {
     const formData = $('#post-tweet').serialize();
     
     if (formData.length === 5) {
-      window.alert("tweet cannot be empty");
+      // window.alert("tweet cannot be empty");
+      $('.error-message').css('display', 'block');
+      $('.error-message').css('visibility', 'visible')
       return;
     } else if (formData.length > 145) {
-      window.alert("tweet cannot exceed 140 characters");
+      // window.alert("tweet cannot exceed 140 characters");
+      $('.error-message').css('display', 'block');
+      $('.error-message').css('visibility', 'visible')
       return;
+    } else if (formData.length > 6 && formData.length <= 145) {
+      $('.error-message').css('display', 'none');
+      $('.error-message').css('visibility', 'hidden')
+      $.ajax({
+        method: 'POST',
+        data: formData,
+        url: '/tweets',
+      })
+      .then((res) => {
+        $(".tweet-container").empty();
+        loadTweets(res);
+      })
     }
 
-    $.ajax({
-      method: 'POST',
-      data: formData,
-      url: '/tweets',
-    })
-    .then((res) => {
-      $(".tweet-container").empty();
-      loadTweets(res);
-    })
-    
+    // $.ajax({
+    //   method: 'POST',
+    //   data: formData,
+    //   url: '/tweets',
+    // })
+    // .then((res) => {
+    //   $(".tweet-container").empty();
+    //   loadTweets(res);
+    // })
   };
 
   $("#post-tweet").submit((event) => {

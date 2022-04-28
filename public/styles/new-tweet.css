@@ -1,16 +1,18 @@
 .new-tweet {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   border: 16px;
   margin: 0em 0em 1em;
   width: 100%;
 }
 
-/* .counter {
-  display: flex;
-  justify-content: space-between;
-} */
+.error-message {
+  display : none;
+  visibility: hidden;
+  border: 2px solid red;
+  color: red;
+  padding: 0.5rem;
+}
 
 .count {
   display: flex;
