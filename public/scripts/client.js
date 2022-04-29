@@ -4,43 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const tweetInfo =  {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//     "handle": "@SirIsaac"
-//     },
-//   "content": {
-//     "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//   "created_at": 1461116232227
-// };
-
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ]
-
 const createTweetElement = function(tweetInfo) {
   let $tweet = $(`
   <article class="tweet">
@@ -64,63 +27,57 @@ const createTweetElement = function(tweetInfo) {
             </div>
           </footer>
         </article>
-        `)
-        return $tweet;
+        `);
+  return $tweet;
 };
 
 
 const renderTweets = function(array) {
   for (let obj of array) {
     let newTweet = createTweetElement(obj);
-  $('.tweet-container').prepend(newTweet);
-  } 
-}
+    $('.tweet-container').prepend(newTweet);
+  }
+};
 
+const errorDisplay = function() {
+  setTimeout(() => {
+    $('.error-message').css('display', 'none');
+    $('.error-message').css('visibility', 'hidden');
+  }, 2000);
+};
 
 $(document).ready(() => {
-  // renderTweets(data);
   const loadTweets = function() {
-    $.ajax('/tweets', {method: "GET"}).then((res) => renderTweets(res))
-  }
+    $.ajax('/tweets', {method: "GET"}).then((res) => renderTweets(res));
+  };
 
   const postNewTweet = (event) => {
     event.preventDefault();
 
     const formData = $('#post-tweet').serialize();
-    
-    if (formData.length === 5) {
-      // window.alert("tweet cannot be empty");
+    const textLength = $('#tweet-text').val().length;
+
+    if (textLength === 0) {
       $('.error-message').css('display', 'block');
-      $('.error-message').css('visibility', 'visible')
+      $('.error-message').css('visibility', 'visible');
+      errorDisplay();
       return;
-    } else if (formData.length > 145) {
-      // window.alert("tweet cannot exceed 140 characters");
+    } else if (textLength > 140) {
       $('.error-message').css('display', 'block');
-      $('.error-message').css('visibility', 'visible')
+      $('.error-message').css('visibility', 'visible');
+      errorDisplay();
       return;
-    } else if (formData.length > 6 && formData.length <= 145) {
-      $('.error-message').css('display', 'none');
-      $('.error-message').css('visibility', 'hidden')
+    } else if (textLength > 1 && textLength <= 141) {
       $.ajax({
         method: 'POST',
         data: formData,
         url: '/tweets',
       })
-      .then((res) => {
-        $(".tweet-container").empty();
-        loadTweets(res);
-      })
+        .then((res) => {
+          $(".tweet-container").empty();
+          loadTweets(res);
+        });
     }
-
-    // $.ajax({
-    //   method: 'POST',
-    //   data: formData,
-    //   url: '/tweets',
-    // })
-    // .then((res) => {
-    //   $(".tweet-container").empty();
-    //   loadTweets(res);
-    // })
   };
 
   $("#post-tweet").submit((event) => {
