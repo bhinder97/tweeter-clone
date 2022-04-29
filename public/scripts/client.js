@@ -27,29 +27,29 @@ const createTweetElement = function(tweetInfo) {
             </div>
           </footer>
         </article>
-        `);
-  return $tweet;
+        `)
+        return $tweet;
 };
 
 
 const renderTweets = function(array) {
   for (let obj of array) {
     let newTweet = createTweetElement(obj);
-    $('.tweet-container').prepend(newTweet);
-  }
-};
+  $('.tweet-container').prepend(newTweet);
+  } 
+}
 
 const errorDisplay = function() {
   setTimeout(() => {
     $('.error-message').css('display', 'none');
-    $('.error-message').css('visibility', 'hidden');
-  }, 2000);
-};
+    $('.error-message').css('visibility', 'hidden')
+  }, 2000)
+}
 
 $(document).ready(() => {
   const loadTweets = function() {
-    $.ajax('/tweets', {method: "GET"}).then((res) => renderTweets(res));
-  };
+    $.ajax('/tweets', {method: "GET"}).then((res) => renderTweets(res))
+  }
 
   const postNewTweet = (event) => {
     event.preventDefault();
@@ -64,7 +64,7 @@ $(document).ready(() => {
       return;
     } else if (textLength > 140) {
       $('.error-message').css('display', 'block');
-      $('.error-message').css('visibility', 'visible');
+      $('.error-message').css('visibility', 'visible')
       errorDisplay();
       return;
     } else if (textLength > 1 && textLength <= 141) {
@@ -73,10 +73,10 @@ $(document).ready(() => {
         data: formData,
         url: '/tweets',
       })
-        .then((res) => {
-          $(".tweet-container").empty();
-          loadTweets(res);
-        });
+      .then((res) => {
+        $(".tweet-container").empty();
+        loadTweets(res);
+      })
     }
   };
 
