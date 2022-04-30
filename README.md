@@ -30,3 +30,12 @@ Any required dependencies can also be found in package.json
 - git push
 - More can be found at this link `https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html`
 
+## Screenshots
+
+!["Screenshot of the main desktop page"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/main-desktop-page.png?raw=true)
+!["Screenshot when you make the page smaller"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/small-display-change.png?raw=true)
+!["Screenshot of the locked navbar"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/locked-navbar.png?raw=true)
+!["Screenshot of the hover state implemented to the tweet boxes and icons"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/hover-status.png?raw=true)
+!["Screenshot of a posted tweet"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/posted-tweet.png?raw=true)
+!["Screenshot of tweets functionality such as descending order and updated timestamps"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/posted-tweets2.png?raw=true)
+!["Screenshot of error msg when submitting an invalid input"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/error.png?raw=true)
