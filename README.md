@@ -41,3 +41,4 @@ Any required dependencies can also be found in package.json
 !["Screenshot of a posted tweet"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/posted-tweet.png?raw=true)
 !["Screenshot of tweets functionality such as descending order and updated timestamps"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/posted-tweets2.png?raw=true)
 !["Screenshot of error msg when submitting an invalid input"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/error.png?raw=true)
+!["Screenshot of updated character count"](https://github.com/bhinder97/tweeter-clone/blob/master/docs/char-count.png?raw=true)
