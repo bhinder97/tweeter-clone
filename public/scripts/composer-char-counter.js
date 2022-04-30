@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  //vanilla JS
+  //vanilla JS - leaving this here to show how to do it the other way
   
   // const input = document.querySelector('textarea');
   // const log = document.getElementById('counter'); //elemsbyClassName returns an ARRAY
@@ -34,14 +34,4 @@ $(document).ready(function() {
       $(log).css('color', 'black');
     }
   });
-
-  // let charCounter = 0;
-  // $('textarea').on('input', () => {
-  //   charCounter = $('textarea').val().length;
-  //   $('.counter').text(140 - charCounter);
-  //   if (charCounter > 140) {
-  //     $('.counter').css('color', 'red');
-  //   }
-  // });
-  
 });
