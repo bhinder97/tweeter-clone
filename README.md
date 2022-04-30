@@ -14,5 +14,19 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
+Any required dependencies can also be found in package.json
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
+- md5
+- timeago.js
+- nodemon(this one is kind of optional to be fair, install for convenience' sake)
+
+## Basic git commands
+- git status
+- git add
+- git commit
+- git push
+- More can be found at this link `https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html`
+
